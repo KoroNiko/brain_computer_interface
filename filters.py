@@ -14,7 +14,7 @@ class Filter:
 		# this is 20 but in the paper it says 15 so maybe it should change. This is the passband
 		# https://www.mathworks.com/help/signal/ug/iir-filter-design.html
 		# the above link is good to remember some stuff
-		self.cutoff_freqs = [5/100, 20/100]
+		self.cutoff_freqs = [5/100, 15/100]
 		# self.b2, self.a2 = signal.iirfilter(self.bp_order, [0.05, 0.2])
 		self.b2, self.a2 = signal.iirdesign([0.05, 0.2], [0.04, 0.21], gpass=0.1, gstop=30)
 
